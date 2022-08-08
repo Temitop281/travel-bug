@@ -7,7 +7,7 @@ if (
 ) {
   baseURL = process.env.REACT_APP_API_BASE_URL;
 } else {
-baseURL = "http://127.0.0.1:8000";
+baseURL = "https://temitope-backend.herokuapp.com/";
 }
 
 // baseURL = "https://europevisitor-backend.herokuapp.com/";
