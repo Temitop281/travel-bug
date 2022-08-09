@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('',views.PlaceList.as_view(),name = 'category_list'),
+    path('', views.PlacesList.as_view(), name='post_list'),
+
 ]

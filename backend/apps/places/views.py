@@ -1,15 +1,19 @@
-from django.shortcuts import render
-from rest_framework import generics,filters
-from .serializers import PlaceSerializers
-from django.http import JsonResponse
-from .models import Place
+from rest_framework import generics, filters
+from .serializers import Placesserializers
+from .models import Places
 from django_filters.rest_framework import DjangoFilterBackend
 
-class PlaceList(generics.ListAPIView):
-    queryset = Place.objects.all()
-    serializer_class = PlaceSerializers
-    filter_backends = [DjangoFilterBackend,filters.SearchFilter]
-    filterset_fields = ['category']
-    search_fields = ['name','description']
+class PlacesList(generics.ListAPIView):
+    queryset = Places.objects.order_by('-created_at').all()
+    serializer_class = Placesserializers
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ['Category']
+    search_fields = ['name', 'decription'] 
 
-# Create your views here.
+
+
+
+
+
+
+

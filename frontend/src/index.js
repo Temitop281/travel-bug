@@ -6,20 +6,17 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import reportWebVitals from './reportWebVitals';
 import * as History from 'history';
-import {createRoot} from "react-dom/client";
 
 const history = History.createBrowserHistory();
 export const store = createStore(history);
 
-const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
-
-root.render(
+ReactDOM.render(
   <Provider store={store}>
-    {/* <ConnectedRouter history={history}> */}
+    <ConnectedRouter history={history}>
       <App />
-    {/* </ConnectedRouter> */}
-  </Provider>
+    </ConnectedRouter>
+  </Provider>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
