@@ -1,7 +1,7 @@
-# Forum App in React & Redux + Django
+# Travel Bug in React & Redux + Django
 
 ```
-Forum App, with a frontend built in React & Redux and a backend built in Django API.
+Travel Bug, with a frontend built in React & Redux and a backend built in Django API.
 ```
 
 ## Live Demo
